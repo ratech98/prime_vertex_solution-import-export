@@ -1,4 +1,5 @@
 // import { Form } from "react-router-dom"
+import { Checkbox } from "@material-tailwind/react";
 import IMAGE from "../images/image"
 // import { EmailJSResponseStatus } from "emailjs-com";
 import emailjs from '@emailjs/browser';
@@ -31,36 +32,53 @@ const ContactUs = () => {
     }
     return(
         <>
-            <div className="w-full md:w-4/12 border border-white rounded-xl px-3 py-10">
-                <div className="">
-                    <div className="text-[#fff] font-semibold text-xl mb-1">Contact With us</div>
+            <div className="flex">
+                <div className="w-1/2">
+                    <div className="">
+                        <div className="text-[#fff] font-semibold text-3xl mb-1">Get in Touch</div>
+                    </div>
+                    <div className="text-gray-600 text-md">
+                        We are here to assist you! Reach out for any inquiries regarding our logistics services.
+                    </div>
+                    <div className="text-sm text-gray-600">
+                        <div className="flex gap-3">
+                            <img className="w-8" src={IMAGE?.mailIcon} alt=""/>
+                            <span className="self-center">info@primevertexsolution.com</span>
+                        </div>
+                        <div className="flex gap-3">
+                            <img className="w-8" src={IMAGE?.mailIcon} alt=""/>
+                            <span className="self-center">(1212) 829382 98239</span>
+                        </div>
+                        <div className="flex gap-3">
+                            <img className="w-8" src={IMAGE?.mailIcon} alt=""/>
+                            <span className="self-center">123 Logistics Avs, Supply City, SC 283983</span>
+                        </div>
+                    </div>
                 </div>
-                <div>
+                <div className="w-1/2">
                     <div className=" ">
                         <form className="py-5" onSubmit={handleSubmit}>
-                            <div className="grid grid-cols-1 md:grid-cols-1 gap-5 mb-5">
-                                <div className="flex">
-                                    <input className="px-5 py-2 rounded-lg w-full focus:outline-none bg-transparent border placeholder:text-white " id="name" name="name" type="type" placeholder="Your Name" autoFocu required/>
-                                    <div className="self-center -ml-8">
-                                        <img className="w-5" src={IMAGE?.nameIcon} alt=""/>
-                                    </div>
+                            <div className="grid grid-cols-1 text-orange-400 md:grid-cols-1 gap-5 mb-5">
+                                <div className="flex flex-col">
+                                    <label>Name</label>
+                                    <input className="px-5 py-2 rounded-full w-full focus:outline-none bg-transparent border border-black placeholder:text-gray-500 " id="name" name="name" type="type" placeholder="Your Name" autoFocu required/>
                                 </div>
-                                <div className="flex">
-                                    <input className="px-5 py-2 rounded-lg w-full focus:outline-none bg-transparent border placeholder:text-white" id="email" name="email" type="email" placeholder="Mail Address" required/>
-                                    <div className="self-center -ml-10">
-                                        <img className="w-8" src={IMAGE?.mailIcon} alt=""/>
-                                    </div>
+                                <div className="flex flex-col">
+                                    <lable>Email</lable>
+                                    <input className="px-5 py-2 rounded-full w-full focus:outline-none bg-transparent border border-black placeholder:text-gray-500" id="email" name="email" type="email" placeholder="Mail Address" required/>
                                 </div>
                             </div>
-                            <div className="flex mb-5">
-                                <textarea rows={3} name="message" id="message" className="px-5 bg-transparent border placeholder:text-white py-2 resize-none rounded-lg w-full focus:outline-none" type="type" placeholder="Your Message"/>
-                                <div className=" mt-2 -ml-10">
-                                    <img className="w-7" src={IMAGE?.mesageIcon} alt=""/>
-                                </div>
+                            <div className="flex flex-col text-orange-400 mb-5">
+                                <label>Message</label>
+                                <textarea rows={3} name="message" id="message" className="px-5 bg-transparent border border border-black placeholder:text-gray-500 py-2 resize-none rounded-lg w-full focus:outline-none" type="type" placeholder="Your Message"/>
                             </div>
-                            <div className="flex justify-end">
-                                <button className="text-white rounded-md font-semibold bg-[#F7722D] px-5 py-2 flex" type="submit" placeholder="Your Message">
-                                    Send Message
+                            <div className="flex gap-3 py-2 text-orange-400">
+                                <Checkbox/>
+                                <p className="self-center">I accept the Terms</p>
+                            </div>
+                            <div className="flex">
+                                <button className="text-white rounded-full  font-semibold flex px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.4)] bg-[#00999e] hover:bg-[#747474]" type="submit" placeholder="Your Message">
+                                    Submit
                                     <div className="self-center">
                                         <img className="w-7 ml-3" src={IMAGE?.RightLongArrow} alt=""/>
                                     </div>
@@ -70,7 +88,6 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
-
         </>
     )
 }
