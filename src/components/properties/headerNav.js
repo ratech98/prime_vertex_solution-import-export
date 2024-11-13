@@ -24,10 +24,10 @@ const HeaderNav = () => {
                                 <Link to="/aboutUs">About US</Link>
                             </li>
                             <li className="hover:text-gray-300">
-                                <Link to="/contact">Services</Link>
+                                <Link to="/services">Services</Link>
                             </li>
                             <li className="hover:text-gray-300">
-                                <Link to="/contact">Resources</Link>
+                                <Link to="/resources">Resources</Link>
                             </li>
                             <li className="hover:text-gray-300">
                                 <Link to="/contact">Contact Us</Link>
@@ -71,14 +71,18 @@ const HeaderNav = () => {
                                         <p className="group-hover:border-b-2">About Us</p>
                                         {/* <svg className="group-hover:fill-black fill-gray-500	" style={{fill:Router.pathname==='/about'? 'black':null}} xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm720 0v-120q0-44-24.5-84.5T666-434q51 6 96 20.5t84 35.5q36 20 55 44.5t19 53.5v120H760ZM360-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47Zm400-160q0 66-47 113t-113 47q-11 0-28-2.5t-28-5.5q27-32 41.5-71t14.5-81q0-42-14.5-81T544-792q14-5 28-6.5t28-1.5q66 0 113 47t47 113ZM120-240h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0 320Zm0-400Z"/></svg> */}
                                     </Link>
-                                    <Link onClick={()=>setShowMenu(!showMenu)} href={'/ourServices'} className="text-[#F7722D] group hover:font-semibold *:mx-2" style={{fontWeight : Router.pathname === '/ourServices' ? 'bold': null,background:Router.pathname==='/ourServices'?'#f3f4f6':null,}}>
+                                    <Link onClick={()=>setShowMenu(!showMenu)} to={'/services'} className="text-[#F7722D] group hover:font-semibold *:mx-2" style={{fontWeight : Router.pathname === '/ourServices' ? 'bold': null,background:Router.pathname==='/ourServices'?'#f3f4f6':null,}}>
                                         <p className="group-hover:border-b-2">Our Services</p>
-                                        <svg className="group-hover:fill-black fill-gray-500" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M80-160v-120h80v-440q0-33 23.5-56.5T240-800h600v80H240v440h240v120H80Zm520 0q-17 0-28.5-11.5T560-200v-400q0-17 11.5-28.5T600-640h240q17 0 28.5 11.5T880-600v400q0 17-11.5 28.5T840-160H600Zm40-120h160v-280H640v280Zm0 0h160-160Z"/></svg>                                
+                                        {/* <svg className="group-hover:fill-black fill-gray-500" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M80-160v-120h80v-440q0-33 23.5-56.5T240-800h600v80H240v440h240v120H80Zm520 0q-17 0-28.5-11.5T560-200v-400q0-17 11.5-28.5T600-640h240q17 0 28.5 11.5T880-600v400q0 17-11.5 28.5T840-160H600Zm40-120h160v-280H640v280Zm0 0h160-160Z"/></svg>                                 */}
                                     </Link>
-                                    <Link onClick={()=>setShowMenu(!showMenu)} href={'/gallery'} className="hover:bg-gray-100 group hover:font-bold *:mx-2" style={{fontWeight : Router.pathname === '/gallery' ? 'bold': null,background:Router.pathname==='/gallery'?'#f3f4f6':null,}}>
+                                    <Link onClick={()=>setShowMenu(!showMenu)} to={'/resources'} className="text-[#F7722D] group hover:font-semibold *:mx-2" style={{fontWeight : Router.pathname === '/ourServices' ? 'bold': null,background:Router.pathname==='/ourServices'?'#f3f4f6':null,}}>
+                                        <p className="group-hover:border-b-2">Resources</p>
+                                        {/* <svg className="group-hover:fill-black fill-gray-500" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M80-160v-120h80v-440q0-33 23.5-56.5T240-800h600v80H240v440h240v120H80Zm520 0q-17 0-28.5-11.5T560-200v-400q0-17 11.5-28.5T600-640h240q17 0 28.5 11.5T880-600v400q0 17-11.5 28.5T840-160H600Zm40-120h160v-280H640v280Zm0 0h160-160Z"/></svg>                                 */}
+                                    </Link>
+                                    {/* <Link onClick={()=>setShowMenu(!showMenu)} to={'/gallery'} className="hover:bg-gray-100 group hover:font-bold *:mx-2" style={{fontWeight : Router.pathname === '/gallery' ? 'bold': null,background:Router.pathname==='/gallery'?'#f3f4f6':null,}}>
                                         <p className="">Gallery</p>
                                         <svg className="group-hover:fill-black fill-gray-500	" style={{fill:Router.pathname==='/gallery'? 'black':null}} xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
-                                    </Link>
+                                    </Link> */}
                                     <a onClick={()=>setShowMenu(!showMenu)} href='#contact' className="text-[#F7722D] group hover:font-semibold *:mx-2" style={{fontWeight : Router.pathname === '/locate' ? 'bold': null,background:Router.pathname==='/locate'?'#f3f4f6':null,}}>
                                         <p className="group-hover:border-b-2">Contact Us</p>
                                         {/* <svg className="group-hover:fill-black fill-gray-500	" style={{fill:Router.pathname==='/locate'? 'black':null}} xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg> */}

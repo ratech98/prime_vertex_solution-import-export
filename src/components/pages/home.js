@@ -295,9 +295,9 @@ const homePage = () => {
                     </div>
                 </div>
 
-                <div className="mb-10 py-10 flex items-center justify-center">
+                <div className="mb-10 flex items-center justify-center">
                     <div className=" flex flex-col items-center justify-center w-10/12 2xl:w-6/12">
-                        <div className="py-10 flex flex-col lg:flex-row gap-7 w-9/12">
+                        {/* <div className="py-10 flex flex-col lg:flex-row gap-7 w-9/12">
                             <div className="self-center ">
                                 <div className="font-semibold text-xl mb-3">
                                     Explore Our Comprehensive Logistics Services
@@ -308,7 +308,7 @@ const homePage = () => {
                                 Discover how our services can enhance your supply chain efficiency and responsiveness.
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                         {/* <div className="py-10 flex flex-col-reverse text-right lg:text-left lg:flex-row gap-7 w-9/12">
                             <div className="self-center lg:w-3/4">
                                 <div className="font-semibold text-xl mb-3">
@@ -392,32 +392,45 @@ const homePage = () => {
                         </div> */}
                     </div>
                 </div>
-                <div className="flex items-center justify-center py-10">
+                <div className="flex items-center justify-center my-10">
                     <div className="grid grid-col-1 md:grid-cols-2 items-center justify-between w-11/12">
                         <div className="flex items-center justify-center hidden md:inline-block">
                             <img className="w-3/4" src={IMAGE?.ITsolution} alt=""/>
                         </div>
-                        <div data-aos="fade-up" className="*:py-3 flex flex-col justify-center items-center">
-                            <div className="font-semibold text-center text-3xl">
-                                Expert Shipping Consultation Services
+                        <div className="">
+                            <div>
+                                <p className="font-bold text-3xl text-center py-3">Our Services</p>
                             </div>
-                            <p className="text-gray-500 text-center">
-                                Our expert consultants provide tailored advice to optimize your logistics strategy. 
-                                We analyze your current processes to identify cost-saving opportunities and enhance the efficiency 
-                                of your shipping operations.
-                            </p>
-                            <div className="*:mb-2">
-                                <div data-aos="fade-right" className="flex gap-3">
-                                    <img className="self-center" src={IMAGE?.SmallArrow} alt=""/>
-                                    <span className="text-gray-500">Receive tailord advice that fits your specific logistics needs.</span>
+                            <div className="flex flex-col gap-3">
+                                <div data-aos="fade-right" data-aos-duration="1000">
+                                    <p className="text-gray-500">
+                                    <span className="font-semibold text-black">Freight Forwarding:</span> We know every shipment is more than just a package it’s a promise. 
+                                    Whether it’s by air, sea, or land, we’ll ensure it reaches where it needs to be, on time and without worry
+                                    </p>
                                 </div>
-                                <div data-aos="fade-right" className="flex gap-3">
-                                    <img className="self-center" src={IMAGE?.SmallArrow} alt=""/>
-                                    <span className="text-gray-500">Identify cost saving opportunities in your supply chain.</span>
+                                <div data-aos="fade-right" data-aos-duration="1000">
+                                    <p className="text-gray-500">
+                                    <span className="font-semibold text-black">Warehousing:</span> You can trust us with the security of your products. 
+                                    Our facilities are more than just storage; they’re an extension of your business, providing a safe space to grow and manage your inventory
+                                    </p>
                                 </div>
-                                <div data-aos="fade-right" className="flex gap-3">
-                                    <img className="self-center" src={IMAGE?.SmallArrow} alt=""/>
-                                    <span className="text-gray-500">Enhance the efficiency of your shipping processes.</span>
+                                <div data-aos="fade-right" data-aos-duration="1000">
+                                    <p className="text-gray-500">
+                                    <span className="font-semibold text-black">Supply Chain Management:</span> We believe that efficiency begins with care. 
+                                    Every link in your supply chain is carefully managed to create the best outcomes for you and your customers."
+                                    </p>
+                                </div>
+                                <div data-aos="fade-right" data-aos-duration="1000">
+                                    <p className="text-gray-500">
+                                    <span className="font-semibold text-black">Customs Clearance: </span>We take the stress out of customs with seamless support, 
+                                    helping you avoid delays and navigate each requirement with ease."
+                                    </p>
+                                </div>
+                                <div  data-aos="fade-right" data-aos-duration="1000">
+                                    <p className="text-gray-500">
+                                    <span className="font-semibold text-black">E-commerce Logistics:</span>You’re passionate about your business, and we’re 
+                                    passionate about helping it grow. From order fulfillment to last-mile delivery, our team is here to support you every step of the way."
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -698,6 +711,29 @@ const homePage = () => {
                     </div>
                     <div className="flex items-center justify-center hidden md:inline-block w-1/2">
                         <img className="" src={IMAGE?.ITsolution} alt=""/>
+                    </div>
+                </div>
+                <div className="flex gap-5">
+                    <div className="p-5 w-1/2">
+                        <div className="font-bold text-2xl py-3">Industries Served</div>
+                        <ul className="list-disc list-inside text-gray-500 *:py-1">
+                            <li><span className="font-semibold text-black">Retail: </span>Helping your products reach customers with care and speed, so you can build trust and loyalty.</li>
+                            <li><span className="font-semibold text-black">Healthcare: </span>Delivering the essentials that matter for people’s health and well-being.</li>
+                            <li><span className="font-semibold text-black">Manufacturing: </span>Supporting your production lines with timely, dependable logistics.</li>
+                            <li><span className="font-semibold text-black">Automotive: </span>Helping keep industries on the move with streamlined, dependable solutions.</li>
+                        </ul>
+                    </div>
+                    <div className="p-5 w-1/2">
+                        <div className="font-bold text-2xl py-3">Testimonials</div>
+                        <div className="text-gray-500 *:py-1">
+                            <div>
+                                PRIME VERTEX SOLUTION truly cares about our business. 
+                                Every shipment is handled with such attention, and they make us feel valued every step of the way.
+                            </div>
+                            <div>
+                                They’re more than just a logistics provider they’re a partner we can count on through thick and thin."
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div id="contact" className=" p-10 ">
