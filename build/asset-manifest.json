@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.8c03a776.css",
-    "main.js": "/static/js/main.c9665c72.js",
+    "main.css": "/static/css/main.57cecfc3.css",
+    "main.js": "/static/js/main.54309741.js",
     "static/media/background.png": "/static/media/background.ea4595b6c320364ef240.png",
     "static/media/WhatsApp Image 2024-08-02 at 11.26.45 AM.svg": "/static/media/WhatsApp Image 2024-08-02 at 11.26.45 AM.acba77e1b41ecd21c0e00db0ec60e6af.svg",
     "static/media/business-person-with-a-resolved-expression-shirt_svgrepo.com.svg": "/static/media/business-person-with-a-resolved-expression-shirt_svgrepo.com.44ef1a8d9e49ca3aa1da8553a4b1a249.svg",
+    "static/media/revicons.eot": "/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/static/media/revicons.e8746a624ed098489406.woff",
     "static/media/cloud-cpu-infrastructure_svgrepo.com.svg": "/static/media/cloud-cpu-infrastructure_svgrepo.com.c47faacdff9bf0904468df0fb78e1d30.svg",
     "static/media/insta.svg": "/static/media/insta.1c86cc88b73ac89177aad2dd45aeccd1.svg",
     "static/media/webicon.svg": "/static/media/webicon.c8bb13602d28d96e07f8aa358b999fa1.svg",
@@ -22,11 +25,11 @@
     "static/media/Ellipse 118.svg": "/static/media/Ellipse 118.c32ca0d7e2dd294492dd51c8274c242d.svg",
     "static/media/right-long-arrow.svg": "/static/media/right-long-arrow.ded739aa4fe45d693814022ac7e07f49.svg",
     "static/media/rightSmallArrow.svg": "/static/media/rightSmallArrow.5d73f3bfd669c8c6f58bf2c610e38b74.svg",
-    "main.8c03a776.css.map": "/static/css/main.8c03a776.css.map",
-    "main.c9665c72.js.map": "/static/js/main.c9665c72.js.map"
+    "main.57cecfc3.css.map": "/static/css/main.57cecfc3.css.map",
+    "main.54309741.js.map": "/static/js/main.54309741.js.map"
   },
   "entrypoints": [
-    "static/css/main.8c03a776.css",
-    "static/js/main.c9665c72.js"
+    "static/css/main.57cecfc3.css",
+    "static/js/main.54309741.js"
   ]
 }

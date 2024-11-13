@@ -32,30 +32,30 @@ const ContactUs = () => {
     }
     return(
         <>
-            <div className="flex">
-                <div className="w-1/2">
+            <div className="flex flex-col lg:flex-row items-center">
+                <div className="lg:w-1/2 flex flex-col items-center justify-center">
                     <div className="">
-                        <div className="text-[#fff] font-semibold text-3xl mb-1">Get in Touch</div>
+                        <div className="text-[#000] font-semibold text-3xl mb-1">Get in Touch</div>
                     </div>
-                    <div className="text-gray-600 text-md">
+                    <div className="text-gray-600 lg:w-4/6 pb-5 text-md">
                         We are here to assist you! Reach out for any inquiries regarding our logistics services.
                     </div>
-                    <div className="text-sm text-gray-600">
-                        <div className="flex gap-3">
-                            <img className="w-8" src={IMAGE?.mailIcon} alt=""/>
+                    <div className="text-sm text-gray-600 flex flex-col gap-3">
+                        <div  data-aos="fade-right" className="flex gap-3">
+                            <img className="" src={IMAGE?.SmallArrow} alt=""/>
                             <span className="self-center">info@primevertexsolution.com</span>
                         </div>
-                        <div className="flex gap-3">
-                            <img className="w-8" src={IMAGE?.mailIcon} alt=""/>
+                        <div data-aos="fade-right" className="flex gap-3">
+                            <img className="" src={IMAGE?.SmallArrow} alt=""/>
                             <span className="self-center">(1212) 829382 98239</span>
                         </div>
-                        <div className="flex gap-3">
-                            <img className="w-8" src={IMAGE?.mailIcon} alt=""/>
+                        <div data-aos="fade-right" className="flex gap-3">
+                            <img className="" src={IMAGE?.SmallArrow} alt=""/>
                             <span className="self-center">123 Logistics Avs, Supply City, SC 283983</span>
                         </div>
                     </div>
                 </div>
-                <div className="w-1/2">
+                <div className="lg:w-1/2">
                     <div className=" ">
                         <form className="py-5" onSubmit={handleSubmit}>
                             <div className="grid grid-cols-1 text-orange-400 md:grid-cols-1 gap-5 mb-5">
@@ -76,7 +76,7 @@ const ContactUs = () => {
                                 <Checkbox/>
                                 <p className="self-center">I accept the Terms</p>
                             </div>
-                            <div className="flex">
+                            <div className="flex items-center justify-center">
                                 <button className="text-white rounded-full  font-semibold flex px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.4)] bg-[#00999e] hover:bg-[#747474]" type="submit" placeholder="Your Message">
                                     Submit
                                     <div className="self-center">

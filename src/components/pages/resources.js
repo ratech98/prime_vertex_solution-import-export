@@ -1,4 +1,4 @@
-const About = () => {
+const Resources = () => {
     return (
       <>
         <div className="px-3">
@@ -8,4 +8,4 @@ const About = () => {
     )
   };
   
-  export default About;
+  export default Resources;

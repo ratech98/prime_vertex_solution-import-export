@@ -14,6 +14,8 @@ export default function (){
           <Route path="/" element={<Layout/>}>
             <Route index element={<Home/>}/>
             <Route path="aboutUs" element={<AboutUs/>}/>
+            <Route path='services' element={<ContectUs/>}/>
+            <Route path='resources' element={<ContectUs/>}/>
             <Route path='contact' element={<ContectUs/>}/>
           </Route>
       </Routes>

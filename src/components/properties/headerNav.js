@@ -11,7 +11,7 @@ const HeaderNav = () => {
     return(
         <>
             <div>
-                <div className="bg-transparant backdrop-blur-md w-full fixed flex justify-between h-16 px-5 py-2">
+                <div className="bg-transparant bg-white backdrop-blur-md w-full z-50 fixed flex justify-between h-16 px-5 py-2">
                     <div className="flex gap-3">
                         <img src={IMAGE?.logo} alt="logo"/>
                     </div>
@@ -27,14 +27,14 @@ const HeaderNav = () => {
                                 <Link to="/contact">Services</Link>
                             </li>
                             <li className="hover:text-gray-300">
-                                <Link to="/contact">Consultation</Link>
+                                <Link to="/contact">Resources</Link>
                             </li>
                             <li className="hover:text-gray-300">
                                 <Link to="/contact">Contact Us</Link>
                             </li>
                         </ul>
                     </nav>
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center hidden lg:flex gap-3">
                         <button className="border text-white px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.4)] bg-[#747474] hover:bg-[#00999e]">Get Quote</button>
                         <button className="border text-white px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.4)] bg-[#00999e] hover:bg-[#747474]">Contact Us</button>
                     </div>
@@ -43,17 +43,17 @@ const HeaderNav = () => {
                             <div className="relative w-10 h-10 cursor-pointer" onClick={()=>setShowMenu(!showMenu)} >
                                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                                 <span
-                                    className={`block w-7 h-1 bg-[#fff] rounded-full transition-all duration-300 ${
+                                    className={`block w-7 h-1 bg-orange-700 rounded-full transition-all duration-300 ${
                                     showMenu ? 'rotate-45 translate-y-2' : ''
                                     }`}
                                 ></span>
                                 <span
-                                    className={`block w-7 h-1 bg-[#fff] mt-1 rounded-full transition-all duration-300 ${
+                                    className={`block w-7 h-1 bg-orange-700 mt-1 rounded-full transition-all duration-300 ${
                                     showMenu ? 'opacity-0' : ''
                                     }`}
                                 ></span>
                                 <span
-                                    className={`block w-7 h-1 bg-[#fff] mt-1 rounded-full transition-all duration-300 ${
+                                    className={`block w-7 h-1 bg-orange-700 mt-1 rounded-full transition-all duration-300 ${
                                     showMenu ? '-rotate-45 -translate-y-2' : ''
                                     }`}
                                 ></span>
@@ -85,7 +85,7 @@ const HeaderNav = () => {
                                     </a>
                                 </ul>
                                 <div className="self-center">
-                                    <span className="text-sm text-gray-500 sm:text-center">© 2020 <a href="https://www.bestlabzglobal.com/" className="hover:underline">BEST LABZ™</a> <br/>All Rights Reserved.</span>
+                                    <span className="text-sm text-gray-500 sm:text-center">© 2020 <a href="https://www.bestlabzglobal.com/" className="hover:underline">PRIME VERTEX SOLUTION™</a> <br/>All Rights Reserved.</span>
                                 </div>
                             </div>
                         </div>
