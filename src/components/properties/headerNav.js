@@ -1,35 +1,36 @@
 // import { Link, Router } from "react-Router-dom"
-import { Link, Router } from "react-router-dom"
+import { Link, Router, useLocation } from "react-router-dom"
 import IMAGE from "../images/image"
 import { useState } from "react"
 
 const HeaderNav = () => {
 
     const [showMenu,setShowMenu] = useState(false)
+    const location = useLocation()
 
 
     return(
-        <>
-            <div>
-                <div className="bg-transparant bg-white backdrop-blur-md w-full z-50 fixed flex justify-between h-16 px-5 py-2">
+        <div className="">
+            <div className="fixed inset-0 z-50 h-fit w-full flex justify-center items-start pt-5 blur-50">
+                <div className="bg-white/50 w-11/12 rounded-full flex justify-between h-16 px-5 py-2">
                     <div className="flex gap-3">
                         <img src={IMAGE?.logo} alt="logo"/>
                     </div>
                     <nav className="self-center hidden md:inline-flex">
-                        <ul className="flex gap-5 text-gray-600">
-                            <li className="hover:text-gray-200">
+                        <ul className="flex gap-5 text-white">
+                            <li className={`hover:text-gray-400 self-center ${location.pathname === '/' ? 'bg-[#194775] px-5 py-2 rounded-full': null} `}>
                                 <Link to="/">Home</Link>
                             </li>
-                            <li className="hover:text-gray-200">
+                            <li className={`hover:text-gray-400 self-center ${location.pathname === '/aboutUs' ? 'bg-[#194775] px-5 py-2 rounded-full': null} `}>
                                 <Link to="/aboutUs">About US</Link>
                             </li>
-                            <li className="hover:text-gray-300">
+                            <li className={`hover:text-gray-400 self-center ${location.pathname === '/services' ? 'bg-[#194775] px-5 py-2 rounded-full': null} `}>
                                 <Link to="/services">Services</Link>
                             </li>
-                            <li className="hover:text-gray-300">
+                            <li className={`hover:text-gray-400 self-center ${location.pathname === '/resources' ? 'bg-[#194775] px-5 py-2 rounded-full': null} `}>
                                 <Link to="/resources">Resources</Link>
                             </li>
-                            <li className="hover:text-gray-300">
+                            <li className={`hover:text-gray-400 self-center ${location.pathname === '/contact' ? 'bg-[#194775] px-5 py-2 rounded-full': null} `}>
                                 <Link to="/contact">Contact Us</Link>
                             </li>
                         </ul>
@@ -96,7 +97,7 @@ const HeaderNav = () => {
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

@@ -33,6 +33,7 @@ import mailIcon from '../../assets/svgFiles/mail_icon.svg'
 import RightLongArrow from '../../assets/svgFiles/right-long-arrow.svg'
 // import contactImageleft from '../../assets/PNGimages/contactImg.png'
 // import BackgroundLines from '../../assets/svgFiles/background pattern.svg'
+import shild from '../../assets/svgFiles/trust-wallet.svg'
 
 const IMAGE = {
     logo: logo,
@@ -50,6 +51,7 @@ const IMAGE = {
     SmallArrow: SmallArrow,
     pv: pv,
     bite: bite,
+    shild: shild,
 //     send: send,
     // MySQL: MySQL,
 //     React: React,
