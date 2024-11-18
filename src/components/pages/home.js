@@ -11,6 +11,8 @@ import CountUp from "react-countup"
 import React, { useEffect, useRef, useState } from "react"
 import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
+import OurServices from "../properties/our_services"
+import Typewriter from 'typewriter-effect'
 
 
 Aos.init()
@@ -39,10 +41,10 @@ const homePage = () => {
     })
 
     const myStyle ={
-        background:`url(/computer.svg)`,
+        background:`url(/contactUsGroup.png)`,
         backgroundPosition:'right',
-        backgroundSize: 'fit', 
-        // height: '500px',
+        backgroundSize: 'fit',
+        height: '100%',
         // Object: 'cover',
         backgroundRepeat:'no-repeat',
     }
@@ -75,7 +77,10 @@ const homePage = () => {
             {/* home top title page */}
 
             <div className="relative">
-                <div className="h-screen brightness-50" style={{backgroundImage:`url(/image.png)`, backgroundPosition:'center', backgroundSize:'cover', backgroundRepeat:'no-repeat'}}>
+                <div className="h-screen" style={{backgroundImage:`url(/background3.jpg)`, backgroundPosition:'center', backgroundSize:'cover', backgroundRepeat:'no-repeat'}}>
+                </div>
+                <div className="absolute top-0 left-0 h-screen w-full bg-[#5A666680] brightness-0">
+
                 </div>
                 <div className="absolute top-20 left-0 flex items-center justify-center h-full">
                     <div className="*:mb-5 md:w-10/12 flex flex-col px-3 text-white">
@@ -86,7 +91,19 @@ const homePage = () => {
                                 <path d="M9.3,127.3c49.3-3,150.7-7.6,199.7-7.4c121.9,0.4,189.9,0.4,282.3,7.2C380.1,129.6,181.2,130.6,70,139 c82.6-2.9,254.2-1,335.9,1.3c-56,1.4-137.2-0.3-197.1,9"></path>
                             </svg> */}
                         <div className="font-medium text-xl hidden md:block">
-                            At PRIME VERTEX SOLUTION, we specialize in optimizing your supply chain and logistics operations. Our expert team is dedicated to providing top-notch shipping consultation and service quotation agreements to enhance your business efficiency.
+                            <Typewriter
+                                // options={{
+                                //     delay: '5'
+                                // }}
+                                onInit={(Typewriter)=>{
+                                    Typewriter.typeString('At PRIME VERTEX SOLUTION, we specialize in optimizing your supply chain and logistics operations. Our expert team is dedicated to providing top-notch shipping consultation and service quotation agreements to enhance your business efficiency.')
+                                    .start();
+                                    
+                                }}
+                                delay
+                                />
+
+                            
                         </div>
                         {/* <div className="flex items-center justify-center gap-3">
                             <button className="border text-white px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.6)] bg-[#00999e] hover:bg-[#747474]">Get Started</button>
@@ -97,27 +114,30 @@ const homePage = () => {
 
             {/* About us page */}
 
-            <div id="aboutUs" className="bg-[#fff] px-5 pt-12">
+            <div id="aboutUs" className="bg-[#fff] pt-12">
 
                 {/* about us */}
 
-                <div className="flex items-center justify-center py-10">
+                <div className="flex items-center px-5 justify-center py-10">
                     <div className="">
                         <div ref={countRef} className="*:py-3 flex flex-col justify-center items-center text-[#003366]">
                             <div className="flex flex-col justify-center items-center w-9/12 mb-10">
-                                <div className="font-semibold text-center text-3xl">
-                                    About us
+                                <div className="flex flex-col items-center py-5">
+                                    <div className="font-semibold text-center text-5xl pb-3">
+                                        About us
+                                    </div>
+                                    <div className="w-3/4 h-2 bg-[#194775] rounded full"></div>
                                 </div>
                                 <p className="text-center">
                                     To redefine logistics through trusted partnerships, delivering solutions that combine reliability with forward-thinking innovation. 
                                     At PRIME VERTEX SOLUTION, we are dedicated to supporting our clients’ goals, streamlining their supply chains, and empowering their growth with every mile.
                                 </p>
-                                <div className="w-full flex justify-end">
+                                <div className="w-full flex justify-end pt-8">
                                     <button className="border text-white px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.6)] bg-[#194775] hover:bg-[#00999e]">Read More</button>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 *:bg-gray-300 *:rounded-lg *:px-3 *:pt-10 *:pb-3 gap-10">
-                                <div className="">
+                            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 *:bg-gray-300 *:rounded-lg *:px-5 *:pt-10 *:pb-5 gap-5">
+                                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50"  className="">
                                     <div className="relative">
                                         <div className="absolute inset-0 w-full -top-20 flex items-center justify-center">
                                             <div className="bg-[#194775] size-16 rounded-full flex items-center justify-center">
@@ -132,48 +152,48 @@ const homePage = () => {
                                         With a focus on itergrity and innovation, we strive to exceed client expectations in every projec we undertake.
                                     </p>
                                 </div>
-                                <div className="">
+                                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" className="">
                                     <div className="relative">
                                         <div className="absolute inset-0 w-full -top-20 flex items-center justify-center">
                                             <div className="bg-[#194775] size-16 rounded-full flex items-center justify-center">
-                                                <img className="w-8" src={IMAGE?.shild} alt=""/>
+                                                <img className="w-8" src={IMAGE?.users} alt=""/>
                                             </div>
                                         </div>
                                     </div>
                                     <p className="font-bold text-xl text-center pb-3">
-                                        {startCount && <CountUp end={500}  duration={3}/>} years
+                                        {startCount && <CountUp end={500}  duration={3}/>} clients
                                     </p>
                                     <p className="">
                                         Our teamm is dedicated to fostering strong relatationships with our clients, ensuring that their 
                                         logistics needs are met whit precision and care.
                                     </p>
                                 </div>
-                                <div className="">
+                                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" className="">
                                     <div className="relative">
                                         <div className="absolute inset-0 w-full -top-20 flex items-center justify-center">
                                             <div className="bg-[#194775] size-16 rounded-full flex items-center justify-center">
-                                                <img className="w-8" src={IMAGE?.shild} alt=""/>
+                                                <img className="w-8" src={IMAGE?.project} alt=""/>
                                             </div>
                                         </div>
                                     </div>
                                     <p className="font-bold text-xl text-center pb-3">
-                                        {startCount && <CountUp end={200}  duration={3}/>} years
+                                        {startCount && <CountUp end={200}  duration={3}/>} projects
                                     </p>
                                     <p className="">
                                         We have successfully managed over 200 logistics projects, showcasing our expertise and commitment to 
                                         excellence.   
                                     </p>
                                 </div>
-                                <div className="">
+                                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50" className="">
                                     <div className="relative">
                                         <div className="absolute inset-0 w-full -top-20 flex items-center justify-center">
                                             <div className="bg-[#194775] size-16 rounded-full flex items-center justify-center">
-                                                <img className="w-8" src={IMAGE?.shild} alt=""/>
+                                                <img className="w-8" src={IMAGE?.awards} alt=""/>
                                             </div>
                                         </div>
                                     </div>
                                     <p className="font-bold text-xl text-center pb-3">
-                                        {startCount && <CountUp end={14}  duration={3}/>} years
+                                        {startCount && <CountUp end={14}  duration={3}/>} awards
                                     </p>
                                     <p className="">
                                         Our dedication has earned us numerous awards in the logistics sector, reflectiong our commitment to quality and service.    
@@ -186,115 +206,18 @@ const homePage = () => {
 
                 {/* Our services */}
 
-                <div className="bg-gradient-to-br from-[#0066CC] via-[#2677C9] via-[#004890] to-[#194775] text-white">
-                    <div className="">
-                        <p className="text-center font-bold text-5xl py-5">Our services</p>
-                    </div>
-                    <div className="">
-        {/* <div className="h-48 w-fit border-r-4 border-dotted border-white"></div> */}
-                        <div className="grid grid-cols-3 gap-8 px-8 py-16">
-                            <div className=" p-5">
-                                <div className="flex items-center justify-center">
-                                    <div className="flex items-center justify-center bg-white rounded-full p-3">
-                                        <img className="" src={IMAGE?.cloud} alt=""/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-center">
-                                        <p className="font-semibold text-xl pb-3 pt-5">Freight forwarding</p>
-                                        <div>
-                                            "We know every shipment is more than just a package – it’s a promise. 
-                                            Whether it’s by air, sea, or land, we’ll ensure it reaches where it needs to be, 
-                                            on time and without worry." 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" p-5">
-                                <div className="flex items-center justify-center">
-                                    <div className="flex items-center justify-center bg-white rounded-full p-3">
-                                        <img className="" src={IMAGE?.cloud} alt=""/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-center">
-                                        <p className="font-semibold text-xl pb-3 pt-5">Warehousing</p>
-                                        <div>
-                                        "You can trust us with the security of your products. 
-                                        Our facilities are more than just storage; they’re an extension of your business, 
-                                        providing a safe space to grow and manage your inventory."
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" p-5">
-                                <div className="flex items-center justify-center">
-                                    <div className="flex items-center justify-center bg-white rounded-full p-3">
-                                        <img className="" src={IMAGE?.cloud} alt=""/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-center">
-                                        <p className="font-semibold text-xl pb-3 pt-5">Supply chain management</p>
-                                        <div>
-                                         "We believe that efficiency begins with care. 
-                                        Every link in your supply chain is carefully managed to 
-                                        create the best outcomes for you and your customers."
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" p-5">
-                                <div className="flex items-center justify-center">
-                                    <div className="flex items-center justify-center bg-white rounded-full p-3">
-                                        <img className="" src={IMAGE?.cloud} alt=""/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-center">
-                                        <p className="font-semibold text-xl pb-3 pt-5">Custom clearance</p>
-                                        <div>
-                                        "We take the stress out of customs with seamless support, 
-                                        helping you avoid delays and navigate each requirement with ease." 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className=" p-5">
-                                <div className="flex items-center justify-center">
-                                    <div className="flex items-center justify-center bg-white rounded-full p-3">
-                                        <img className="" src={IMAGE?.cloud} alt=""/>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="text-center">
-                                        <p className="font-semibold text-xl pb-3 pt-5">Warehousing</p>
-                                        <div>
-                                            "You’re passionate about your business, and we’re passionate about helping it grow. 
-                                            From order fulfillment to last-mile delivery, our team is here to support you every step of the way."
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="px-16">
-                                <div className="flex border-2 cursor-pointer rounded-2xl w-full h-full items-center justify-center">
-                                    <button className="flex items-center justify-center rounded-full p-3">
-                                        <div>
-                                            <p className="font-bold text-lg">For more details</p>
-                                            <p>Click here</p>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div>
+                    <OurServices/>
                 </div>
 
                 {/* Client rewiev */}
 
                 <div className="flex flex-col items-center">
-                    <div className="text-center">
-                        <div className="font-bold text-5xl text-[#003366] mt-20 pb-10">What are client says</div>
+                    <div className="flex flex-col text-[#003366] items-center py-10 mt-10">
+                        <div className="font-semibold text-center text-5xl pb-3">
+                            What are client says
+                        </div>
+                        <div className="w-[218px] h-2 bg-[#003366] rounded full"></div>
                     </div>
                     <div className="w-5/6">
                         <Carousel
@@ -696,13 +619,16 @@ const homePage = () => {
 
                 <div className="bg-gradient-to-bl from-[#194775] via-[#004890] via-[#2677C9] to-[#0066CC] flex items-center justify-center my-10 py-10">
                     <div className="">
-                        <div className="text-white">
-                            <p className="font-bold text-5xl text-center py-5">Industries we serving</p>
+                    <div className="flex flex-col items-center text-white py-5 pb-10">
+                        <div className="font-semibold text-center text-5xl pb-3">
+                            Industries we serving
                         </div>
-                        <div className="grid grid-cols-4 text-[#2276C9] px-8 gap-5">
-                            <div className="bg-white rounded-xl p-3">
+                        <div className="w-[218px] h-2 bg-[#fff] rounded full"></div>
+                    </div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 text-[#2276C9] px-8 gap-5">
+                            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100" className="bg-white rounded-xl p-3">
                                 <div>
-                                    <img className="rounded-xl" src={IMAGE?.ITsolution} alt=""/>
+                                    <img className="rounded-xl" src={IMAGE?.retail} alt=""/>
                                 </div>
                                 <div>
                                     <div className="py-3 font-bold text-center text-2xl">Retail</div>
@@ -712,9 +638,9 @@ const homePage = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="bg-white rounded-xl p-3">
+                            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300" className="bg-white rounded-xl p-3">
                                 <div>
-                                    <img className="rounded-xl" src={IMAGE?.ITsolution} alt=""/>
+                                    <img className="rounded-xl" src={IMAGE?.healthcare} alt=""/>
                                 </div>
                                 <div>
                                     <div className="py-3 font-bold text-center text-2xl">Healthcare</div>
@@ -723,9 +649,9 @@ const homePage = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="bg-white rounded-xl p-3">
+                            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="500" className="bg-white rounded-xl p-3">
                                 <div>
-                                    <img className="rounded-xl" src={IMAGE?.ITsolution} alt=""/>
+                                    <img className="rounded-xl" src={IMAGE?.manifactoring} alt=""/>
                                 </div>
                                 <div>
                                     <div className="py-3 font-bold text-center text-2xl">Manufacturing</div>
@@ -734,9 +660,9 @@ const homePage = () => {
                                     </p>
                                 </div>
                             </div>
-                            <div className="bg-white rounded-xl p-3">
+                            <div data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700" className="bg-white rounded-xl p-3">
                                 <div>
-                                    <img className="rounded-xl" src={IMAGE?.ITsolution} alt=""/>
+                                    <img className="rounded-xl" src={IMAGE?.automobile} alt=""/>
                                 </div>
                                 <div>
                                     <div className="py-3 font-bold text-center text-2xl">Automobile</div>
@@ -749,8 +675,8 @@ const homePage = () => {
                     </div>
                 </div>
 
-
-                <div className="flex items-center justify-between px-3">
+{/* Old work */}
+                {/* <div className="flex items-center justify-between px-3">
                     <div data-aos="fade-up" className="lg:w-1/2 self-center">
                         <div className="text-5xl font-semibold text-center">
                         Request a Service Quote
@@ -792,11 +718,12 @@ const homePage = () => {
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="contact" className=" p-10 ">
+                </div> */}
+
+                <div id="contact" className="pt-10">
                     <div className="">
-                        <div className={``}>
-                            <div className="">
+                        <div className={` py-10 px-5 bg-red-400`} style={myStyle}>
+                            <div className="md:ml-20">
                                 <ContactUs/>
                             </div>
                         </div>
