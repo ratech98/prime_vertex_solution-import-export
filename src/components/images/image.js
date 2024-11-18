@@ -46,8 +46,14 @@ import automobile from '../../assets/svgFiles/PNGimages/automobile.png'
 import healthcare from '../../assets/svgFiles/PNGimages/healthcare.png'
 import manifactoring from '../../assets/svgFiles/PNGimages/manifactoring.png'
 import retail from '../../assets/svgFiles/PNGimages/retail.png'
+import english from '../../assets/svgFiles/English.svg'
+import login from '../../assets/svgFiles/login.svg'
+import world from '../../assets/svgFiles/world.svg'
 
 const IMAGE = {
+    english: english,
+    login: login,
+    world: world,
     automobile: automobile,
     manifactoring: manifactoring,
     healthcare: healthcare,

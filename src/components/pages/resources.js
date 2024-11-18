@@ -1,7 +1,7 @@
 const Resources = () => {
     return (
       <>
-        <div className="px-3">
+        <div className="px-5">
           resources......
         </div>
       </>

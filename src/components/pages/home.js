@@ -13,6 +13,7 @@ import Carousel from "react-multi-carousel"
 import "react-multi-carousel/lib/styles.css"
 import OurServices from "../properties/our_services"
 import Typewriter from 'typewriter-effect'
+import { Link } from "react-router-dom"
 
 
 Aos.init()
@@ -82,19 +83,19 @@ const homePage = () => {
                 <div className="absolute top-0 left-0 h-screen w-full bg-[#5A666680] brightness-0">
 
                 </div>
-                <div className="absolute top-20 left-0 flex items-center justify-center h-full">
-                    <div className="*:mb-5 md:w-10/12 flex flex-col px-3 text-white">
+                <div className="absolute inset-0 flex items-center justify-center h-full">
+                    <div className="*:mb-5 md:w-10/12 flex flex-col px-3 text-white text-center">
                         <div className=" font-bold text-5xl text-center">
                             Your Reliable Partner in Global Supply Chain Solutions
                         </div>
                             {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150" preserveAspectRatio="none">
                                 <path d="M9.3,127.3c49.3-3,150.7-7.6,199.7-7.4c121.9,0.4,189.9,0.4,282.3,7.2C380.1,129.6,181.2,130.6,70,139 c82.6-2.9,254.2-1,335.9,1.3c-56,1.4-137.2-0.3-197.1,9"></path>
                             </svg> */}
-                        <div className="font-medium text-xl hidden md:block">
+                        <div className="font-medium text-xl">
                             <Typewriter
-                                // options={{
-                                //     delay: '5'
-                                // }}
+                                options={{
+                                    delay: '70'
+                                }}
                                 onInit={(Typewriter)=>{
                                     Typewriter.typeString('At PRIME VERTEX SOLUTION, we specialize in optimizing your supply chain and logistics operations. Our expert team is dedicated to providing top-notch shipping consultation and service quotation agreements to enhance your business efficiency.')
                                     .start();
@@ -133,10 +134,10 @@ const homePage = () => {
                                     At PRIME VERTEX SOLUTION, we are dedicated to supporting our clients’ goals, streamlining their supply chains, and empowering their growth with every mile.
                                 </p>
                                 <div className="w-full flex justify-end pt-8">
-                                    <button className="border text-white px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.6)] bg-[#194775] hover:bg-[#00999e]">Read More</button>
+                                    <Link to={'/aboutUs'} className="border text-white px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.6)] bg-[#194775] hover:bg-[#194790]">Read More</Link>
                                 </div>
                             </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 *:bg-gray-300 *:rounded-lg *:px-5 *:pt-10 *:pb-5 gap-5">
+                            <div className="grid grid-cols-1 gap-12 xl:gap-5 md:grid-cols-2 xl:grid-cols-4 *:bg-gray-300 *:rounded-lg *:px-5 *:pt-10 *:pb-5">
                                 <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50"  className="">
                                     <div className="relative">
                                         <div className="absolute inset-0 w-full -top-20 flex items-center justify-center">

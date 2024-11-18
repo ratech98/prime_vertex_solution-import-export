@@ -35,11 +35,20 @@ const HeaderNav = () => {
                             </li>
                         </ul>
                     </nav>
-                    <div className="flex items-center hidden lg:flex gap-3">
-                        <button className="border text-white px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.4)] bg-[#747474] hover:bg-[#00999e]">Get Quote</button>
-                        <button className="border text-white px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.4)] bg-[#00999e] hover:bg-[#747474]">Contact Us</button>
+                    <div className="flex items-center hidden lg:flex gap-5">
+                        {/* <button className="border text-white px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.4)] bg-[#747474] hover:bg-[#00999e]">Get Quote</button>
+                        <button className="border text-white px-4 py-2 rounded-full shadow-[1px_2px_1px_1px_rgba(0,0,0,0.4)] bg-[#00999e] hover:bg-[#747474]">Contact Us</button> */}
+                        <div className="size-5 flex items-center justify-center">
+                            <img src={IMAGE?.world} alt=""/>
+                        </div>
+                        <div className="size-5 flex items-center justify-center">
+                            <img src={IMAGE?.english} alt=""/>
+                        </div>
+                        <div className="size-5 flex items-center justify-center">
+                            <img src={IMAGE?.login} alt=""/>
+                        </div>
                     </div>
-                    <div className="md:hidden">
+                    <div className="md:hidden flex items-center justify-center">
                         <div className="flex md:hidden">
                             <div className="relative w-10 h-10 cursor-pointer" onClick={()=>setShowMenu(!showMenu)} >
                                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
@@ -61,8 +70,8 @@ const HeaderNav = () => {
                                 </div>
                             </div>
                         </div> 
-                        <div className="">
-                            <div className={`absolute top-16 -left-full top-0 flex flex-col justify-between pb-20 md:hidden z-50 text-black h-screen pt-10 transition-transform backdrop-blur-md bg-black text-white translate-x-full w-full ${showMenu === true ? null : 'hidden'}`}>
+                        <div className="fixed inset-0 z-40 h-fit w-full flex justify-center items-start mt-24 blur-50">
+                            <div className={`bg-[#194775] w-11/12 rounded-3xl flex flex-col items-center justify-center px-5 py-2 ${showMenu === true ? null : 'hidden'}`}>
                                 <ul className="*:bg-red-20 *:my-2 font-bold text-xl *:p-2 *:text-center *:flex *:items-center *:justify-center ">
                                     <Link onClick={()=>setShowMenu(!showMenu)} to="/" className=" text-[#F7722D] group hover:font-semibold *:mx-2" style={{fontWeight : Router.pathname === '/' ? 'bold': null,background:Router.pathname==='/'?'#f3f4f6':null,}}>
                                         <p className="group-hover:border-b-2">Home</p>  
@@ -84,13 +93,13 @@ const HeaderNav = () => {
                                         <p className="">Gallery</p>
                                         <svg className="group-hover:fill-black fill-gray-500	" style={{fill:Router.pathname==='/gallery'? 'black':null}} xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M360-400h400L622-580l-92 120-62-80-108 140Zm-40 160q-33 0-56.5-23.5T240-320v-480q0-33 23.5-56.5T320-880h480q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H320Zm0-80h480v-480H320v480ZM160-80q-33 0-56.5-23.5T80-160v-560h80v560h560v80H160Zm160-720v480-480Z"/></svg>
                                     </Link> */}
-                                    <a onClick={()=>setShowMenu(!showMenu)} href='#contact' className="text-[#F7722D] group hover:font-semibold *:mx-2" style={{fontWeight : Router.pathname === '/locate' ? 'bold': null,background:Router.pathname==='/locate'?'#f3f4f6':null,}}>
+                                    <Link onClick={()=>setShowMenu(!showMenu)} to={'/contact'} className="text-[#F7722D] group hover:font-semibold *:mx-2" style={{fontWeight : Router.pathname === '/locate' ? 'bold': null,background:Router.pathname==='/locate'?'#f3f4f6':null,}}>
                                         <p className="group-hover:border-b-2">Contact Us</p>
                                         {/* <svg className="group-hover:fill-black fill-gray-500	" style={{fill:Router.pathname==='/locate'? 'black':null}} xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M162-120q-18 0-30-12t-12-30v-162q0-13 9-23.5t23-14.5l138-28q14-2 28.5 2.5T342-374l94 94q38-22 72-48.5t65-57.5q33-32 60.5-66.5T681-524l-97-98q-8-8-11-19t-1-27l26-140q2-13 13-22.5t25-9.5h162q18 0 30 12t12 30q0 125-54.5 247T631-329Q531-229 409-174.5T162-120Zm556-480q17-39 26-79t14-81h-88l-18 94 66 66ZM360-244l-66-66-94 20v88q41-3 81-14t79-28Zm358-356ZM360-244Z"/></svg> */}
-                                    </a>
+                                    </Link>
                                 </ul>
-                                <div className="self-center">
-                                    <span className="text-sm text-gray-500 sm:text-center">© 2020 <a href="https://www.bestlabzglobal.com/" className="hover:underline">PRIME VERTEX SOLUTION™</a> <br/>All Rights Reserved.</span>
+                                <div className="self-center pt-5 w-full text-center">
+                                    <span className="text-sm text-gray-500 text-center">© 2020 <a href="https://www.bestlabzglobal.com/" className="hover:underline">PRIME VERTEX SOLUTION™</a> <br/>All Rights Reserved.</span>
                                 </div>
                             </div>
                         </div>

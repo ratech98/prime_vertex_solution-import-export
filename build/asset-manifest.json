@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.817606bf.css",
-    "main.js": "/static/js/main.8585a337.js",
+    "main.css": "/static/css/main.149648bb.css",
+    "main.js": "/static/js/main.9e1d1b88.js",
     "static/media/background.png": "/static/media/background.ea4595b6c320364ef240.png",
     "static/media/manifactoring.png": "/static/media/manifactoring.e9676d041c7903444492.png",
     "static/media/retail.png": "/static/media/retail.c446656c03ae0a88775f.png",
@@ -38,11 +38,11 @@
     "static/media/trust-wallet.svg": "/static/media/trust-wallet.e4941498db9384f3234b772519087818.svg",
     "static/media/right-long-arrow.svg": "/static/media/right-long-arrow.ded739aa4fe45d693814022ac7e07f49.svg",
     "static/media/rightSmallArrow.svg": "/static/media/rightSmallArrow.5d73f3bfd669c8c6f58bf2c610e38b74.svg",
-    "main.817606bf.css.map": "/static/css/main.817606bf.css.map",
-    "main.8585a337.js.map": "/static/js/main.8585a337.js.map"
+    "main.149648bb.css.map": "/static/css/main.149648bb.css.map",
+    "main.9e1d1b88.js.map": "/static/js/main.9e1d1b88.js.map"
   },
   "entrypoints": [
-    "static/css/main.817606bf.css",
-    "static/js/main.8585a337.js"
+    "static/css/main.149648bb.css",
+    "static/js/main.9e1d1b88.js"
   ]
 }

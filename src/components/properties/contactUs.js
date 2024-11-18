@@ -26,7 +26,7 @@ const ContactUs = () => {
     }
     return(
         <>
-            <div className="w-full md:w-4/12 border border-[#194775] rounded-xl px-3 py-10">
+            <div className="w-full md:w-4/12 bg-white border border-[#194775] rounded-xl px-3 py-10">
                 <div className="">
                     <div className="text-[#194775] font-semibold text-xl mb-1">Contact With us</div>
                 </div>

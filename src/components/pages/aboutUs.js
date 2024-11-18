@@ -1,8 +1,8 @@
 const About = () => {
     return (
       <>
-        <div className="px-3">
-            <div className="pt-16">
+        <div className="px-5">
+            <div className="pt-28">
                 <div>
                     <p className="font-bold text-3xl text-center">Our Story</p>
                 </div>
